@@ -1,7 +1,7 @@
 # Java Reference
 
 ## 1. Variables and Control Structures
- 
+
 ```java
 public class Main{
 
