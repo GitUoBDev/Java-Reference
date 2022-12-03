@@ -155,6 +155,137 @@ public class Main {
 
 ```
 
+
+<details>
+<summary>3.1 Sample program without using functions</summary>
+
+```java
+import java.util.Scanner;
+
+public class Main {
+  
+    public static void main(String[] args) {
+    
+        Scanner sc = new Scanner(System.in);
+        int x, y;
+        
+        System.out.println("Please enter x and y");
+        x = sc.nextInt();
+        y = sc.nextInt();
+        
+        int sum = x + y;
+        System.out.println("The sum is: " + sum);
+  
+    }
+    
+  }
+```
+</details>
+
+<details>
+<summary>3.2 Sample program using a function with no input or return value</summary>
+
+```java
+import java.util.Scanner;
+
+public class Main {
+
+    public static void  addNumbers(){
+
+        Scanner sc = new Scanner(System.in);
+        int x, y;
+        
+        System.out.println("Please enter x and y");
+        x = sc.nextInt();
+        y = sc.nextInt();
+        
+        int sum = x + y;
+        System.out.println("The sum is: " + sum);
+
+    }
+    
+    public static void main(String[] args) {
+    
+        addNumbers();
+  
+    }
+    
+  }
+```
+</details>
+
+<details>
+<summary>3.3 Sample program using a function with input</summary>
+
+```java
+import java.util.Scanner;
+
+public class Main {
+
+    public static void  addNumbers(int x, int y){
+        
+        int sum = x + y;
+        System.out.println("The sum is: " + sum);
+
+    }
+
+    public static void main(String[] args) {
+    
+        Scanner sc = new Scanner(System.in);
+        int x, y;
+        
+        System.out.println("Please enter x and y");
+        x = sc.nextInt();
+        y = sc.nextInt();
+
+        addNumbers(x,y);
+  
+    }
+    
+  }
+```
+</details>
+
+<details>
+<summary>3.4 Sample program using a function with input and a return value</summary>
+
+```java
+import java.util.Scanner;
+
+public class Main {
+
+    public static int  addNumbers(int x, int y){
+        
+        int sum = x + y;
+        
+        return sum;
+
+    }
+
+    public static void main(String[] args) {
+    
+        Scanner sc = new Scanner(System.in);
+        int x, y;
+        
+        System.out.println("Please enter x and y");
+        x = sc.nextInt();
+        y = sc.nextInt();
+
+        System.out.println("The sum is: " + addNumbers(x,y) );
+  
+    }
+    
+  }
+```
+</details>
+
+<details>
+<summary>3.3 Sample program using a function with input</summary>
+
+```java
+```
+</details>
+
 ## 4.1 Classes
 
 ```java
