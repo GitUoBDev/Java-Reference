@@ -142,22 +142,86 @@ public class Main {
 4,5,6,
 7,8,9,
 10,11,12,
+
 */
 ```
 
 </details>
 
 <details>
-<summary>3.3 Sample program using a function with input</summary>
+<summary>Sum elements in a 2D array</summary>
 
 ```java
+public class Main {
+
+    public static void main(String[] args) {
+    
+        int[][] arr = {{1,2,3},{4,5,6},{7,8,9},{10,11,12}};
+
+        int sum=0;
+
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr[i].length; j++) {
+                sum += arr[i][j];
+            }
+        }
+        
+        System.out.println("The sum is: " + sum );
+    }
+    
+  }
 ```
 </details>
 
 <details>
-<summary>3.3 Sample program using a function with input</summary>
+<summary>Count elements in a 2D array</summary>
 
 ```java
+public class Main {
+
+    public static void main(String[] args) {
+    
+        int[][] arr = {{1,2,3},{4,5,6},{7,8,9},{10,11,12}};
+
+        int count=0;
+
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr[i].length; j++) {
+                count++;
+            }
+        }
+        
+        System.out.println("The count is: " + count );
+    }
+    
+  }
+```
+</details>
+
+<details>
+<summary>Sum elements in a 2D array and find their average</summary>
+
+```java
+public class Main {
+
+    public static void main(String[] args) {
+    
+        int[][] arr = {{1,2,3},{4,5,6},{7,8,9},{10,11,12}};
+
+        int sum=0;
+        int count=0;
+
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr[i].length; j++) {
+                count++;
+                sum += arr[i][j];
+            }
+        }
+        
+        System.out.println("The average is: " + ( (double) sum/count ) );
+    }
+    
+  }
 ```
 </details>
 
