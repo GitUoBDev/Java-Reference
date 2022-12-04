@@ -69,7 +69,7 @@ public class Main{
 ```
 
 ## 2. Arrays
-
+<!-- 
 ```java
 
 public class Main {
@@ -110,7 +110,7 @@ public class Main {
   
 }
 
-```
+``` -->
 
 
 <details>
