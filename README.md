@@ -673,8 +673,7 @@ class Book{
 
 ## 5. Count, Min, Max, Sum, Average
 
-Provided the following information
-about a number books (title,pages,subject
+Below are genral examples of how you might calculate count,min,max,sum,average
 
 <details>
 <summary>Basic</summary>
