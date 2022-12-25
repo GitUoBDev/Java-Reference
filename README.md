@@ -584,7 +584,39 @@ Write a program that:
 <summary>Solution using parallel arrays</summary>
 
 ```java
-import java.util.Scanner;
+public class Main{ 
+
+  public static void printInfo(String t,int p,String s,String o){
+    System.out.println("Book: " + t + " - " + p + " pages" 
+  + " ("+ s +") " + "Owner: " + o);}
+
+  public static void main(String[] args){
+
+    String[] titles = {"Linear Algebra","Thermodynamics","Astrophysics"};
+    int[] noPages = {200,700,500};
+    String[] subject = {"Maths","Physics","Physics"};
+    String[] owner = new String[3];
+    
+    // print info for all books
+    System.out.println("\nAll books info:");
+    for (int i = 0; i < titles.length; i++) {
+      printInfo(titles[i],noPages[i],subject[i],owner[i]);
+    }
+    
+    // find physics book with most number of pages
+    int maxPages = noPages[0], maxBookId=0;
+    for (int i = 0; i < titles.length; i++) {
+      if(subject[i].equals("Physics") &&  
+      maxPages<noPages[i])
+      {maxPages=noPages[i]; maxBookId=i;}
+    }
+    System.out.println("\nPhysics book with most number of pages:");
+    printInfo(titles[maxBookId],noPages[maxBookId],subject[maxBookId],owner[maxBookId]);
+
+  } 
+  
+}
+  
 ```
 </details>
 
@@ -592,6 +624,48 @@ import java.util.Scanner;
 <summary>Solution using classes</summary>
 
 ```java
-import java.util.Scanner;
+class Book{
+    public String title;
+    public int noPages;
+    public String subject;
+    public String owner;
+  
+    Book(String t,int p, String s){ title=t; noPages = p; subject = s; }
+    public void printInfo(){System.out.println("Book: " + title + " - " + noPages + " pages" 
+    + " ("+ subject +") " + "Owner: " + owner);}
+    public String getOwner(){return owner;}
+    public void setOwner(String s){owner=s;}
+  }
+  
+  public class Main{ 
+  
+    public static void main(String[] args){
+      
+      Book[] books = {
+        new Book("Linear Algebra", 200 , "Maths"),
+        new Book("Thermodynamics", 700 , "Physics"),
+        new Book("Astrophysics", 500 , "Physics"),
+      };
+      
+      // print info for all books
+      System.out.println("\nAll books info:");
+      for (int i = 0; i < books.length; i++) {
+        books[i].printInfo();
+      }
+  
+      // find physics book with most number of pages
+      int maxPages = books[0].noPages, maxBookId=0;
+      for (int i = 0; i < books.length; i++) {
+        if(books[i].subject.equals("Physics") &&  
+        maxPages<books[i].noPages)
+        {maxPages=books[i].noPages; maxBookId=i;}
+      }
+      System.out.println("\nPhysics book with most number of pages:");
+      books[maxBookId].printInfo();
+  
+    } 
+    
+  }
+    
 ```
 </details>
