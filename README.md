@@ -669,3 +669,194 @@ class Book{
     
 ```
 </details>
+
+
+## 5. Count, Min, Max, Sum, Average
+
+Provided the following information
+about a number books (title,pages,subject
+
+<details>
+<summary>Basic</summary>
+
+```java
+import java.util.Scanner;
+
+public class Main{ 
+
+  public static void main(String[] args){
+
+    double val;
+    double count=0,min=99999,max=-99999,sum=0,average=0;
+
+    Scanner sc = new Scanner(System.in);
+    for (int i = 0; i < 5; i++) {
+      System.out.println("Enter a value: ");
+      val = sc.nextDouble();
+      count++;
+      sum+=val;
+      if (max<val) {max=val;} 
+      if (min>val) {min=val;} 
+    }
+    average = sum/count;
+
+    System.out.println("Count is: "+ count);
+    System.out.println("Min is: "+ min);
+    System.out.println("Max is: "+ max);
+    System.out.println("Sum is: "+ sum);
+    System.out.println("Average is: "+ average);
+
+  } 
+  
+}
+  
+```
+</details>
+
+<details>
+<summary>In 1D arrays</summary>
+
+```java
+import java.util.Scanner;
+
+public class Main{ 
+
+  public static void main(String[] args){
+
+    double[] arr = {1,2,3,4,5};
+    double count=0,min=arr[0],max=arr[0],sum=0,average=0;
+
+    for (int i = 0; i < arr.length; i++) {
+      count++;
+      sum+=arr[i];
+      if (max<arr[i]) {max=arr[i];} 
+      if (min>arr[i]) {min=arr[i];} 
+    }
+    average = sum/count;
+
+    System.out.println("Count is: "+ count);
+    System.out.println("Min is: "+ min);
+    System.out.println("Max is: "+ max);
+    System.out.println("Sum is: "+ sum);
+    System.out.println("Average is: "+ average);
+
+  } 
+  
+}
+  
+```
+</details>
+
+<details>
+<summary>In 1D parallel arrays</summary>
+
+```java
+import java.util.Scanner;
+
+public class Main{ 
+
+  public static void main(String[] args){
+
+    String[] names = {"A","B","C"};
+    double[] vals  = {1,2,3};
+    String minName = names[0],maxName= names[0];
+    double count=0,min=vals[0],max=vals[0],sum=0,average=0;
+
+    for (int i = 0; i < names.length; i++) {
+      count++;
+      sum+=vals[i];
+      if (max<vals[i]) {max=vals[i];maxName=names[i];} 
+      if (min>vals[i]) {min=vals[i];minName=names[i];} 
+    }
+    average = sum/count;
+
+    System.out.println("Count is: "+ count);
+    System.out.println("Min is: "+ min + " - " + minName);
+    System.out.println("Max is: "+ max + " - " + maxName);
+    System.out.println("Sum is: "+ sum);
+    System.out.println("Average is: "+ average);
+
+  } 
+  
+}
+  
+```
+</details>
+
+<details>
+<summary>In 2D arrays</summary>
+
+```java
+import java.util.Scanner;
+
+public class Main{ 
+
+  public static void main(String[] args){
+
+    double[][] arr = {{1,2,3},{4,5,6},{7,8,9}};
+    double count=0,min=arr[0][0],max=arr[0][0],sum=0,average=0;
+
+    for (int i = 0; i < arr.length; i++) {
+      for (int j = 0; j < arr[i].length; j++) {
+        count++;
+        sum+=arr[i][j];
+        if (max<arr[i][j]) {max=arr[i][j];} 
+        if (min>arr[i][j]) {min=arr[i][j];} 
+      }
+    }
+    average = sum/count;
+
+    System.out.println("Count is: "+ count);
+    System.out.println("Min is: "+ min);
+    System.out.println("Max is: "+ max);
+    System.out.println("Sum is: "+ sum);
+    System.out.println("Average is: "+ average);
+
+  } 
+  
+}
+  
+```
+</details>
+
+<details>
+<summary>In Class arrays</summary>
+
+```java
+import java.util.Scanner;
+
+class Simple{String name; double val; Simple(String n,double v){name = n;val = v;}}
+
+public class Main{ 
+
+  public static void main(String[] args){
+
+    Simple[] objects = {
+      new Simple("A",1),
+      new Simple("B",2),
+      new Simple("C",3)
+    };
+
+    String minName = objects[0].name,maxName= objects[0].name;
+    double count=0,min=objects[0].val,max=objects[0].val,sum=0,average=0;
+
+    for (int i = 0; i < objects.length; i++) {
+      count++;
+      sum+=objects[i].val;
+      if (max<objects[i].val) {max=objects[i].val;maxName=objects[i].name;} 
+      if (min>objects[i].val) {min=objects[i].val;minName=objects[i].name;} 
+    }
+    average = sum/count;
+
+    System.out.println("Count is: "+ count);
+    System.out.println("Min is: "+ min + " - " + minName);
+    System.out.println("Max is: "+ max + " - " + maxName);
+    System.out.println("Sum is: "+ sum);
+    System.out.println("Average is: "+ average);
+
+  } 
+  
+}
+  
+```
+</details>
