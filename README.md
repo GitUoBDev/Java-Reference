@@ -2,6 +2,9 @@
 
 ## 1. Variables and Control Structures
 
+<details>
+<summary>Basics</summary>
+
 ```java
 public class Main{
 
@@ -67,8 +70,13 @@ public class Main{
     }
 }
 ```
+</details>
 
 ## 2. Arrays
+
+
+<details>
+<summary>1D Parallel Arrays</summary>
 
 ```java
 
@@ -111,7 +119,7 @@ public class Main {
 }
 
 ```
-
+</details>
 
 <details>
 <summary>Print values in a 2D array</summary>
@@ -231,6 +239,10 @@ public class Main {
 
 ## 3. Functions
 
+
+<details>
+<summary>Function Basics</summary>
+
 ```java
 
 public class Main {
@@ -271,10 +283,10 @@ public class Main {
 }
 
 ```
-
+</details>
 
 <details>
-<summary>Sample program without using functions</summary>
+<summary>Basic program without using functions</summary>
 
 ```java
 import java.util.Scanner;
@@ -300,7 +312,7 @@ public class Main {
 </details>
 
 <details>
-<summary>Sample program using a function with no input or return value</summary>
+<summary>Program using a function (with no input or return value)</summary>
 
 ```java
 import java.util.Scanner;
@@ -332,7 +344,7 @@ public class Main {
 </details>
 
 <details>
-<summary>Sample program using a function with input</summary>
+<summary>Program using a function (with input)</summary>
 
 ```java
 import java.util.Scanner;
@@ -364,7 +376,7 @@ public class Main {
 </details>
 
 <details>
-<summary>Sample program using a function with input and a return value</summary>
+<summary>Program using a function (with input and a return value)</summary>
 
 ```java
 import java.util.Scanner;
@@ -397,7 +409,10 @@ public class Main {
 </details>
 
 
-## 4.1 Classes
+## 4. Classes
+
+<details>
+<summary>Basic Class</summary>
 
 ```java
 
@@ -443,8 +458,10 @@ Ate the  Apple
 */
 
 ```
+</details>
 
-## 4.2 Class Constructures
+<details>
+<summary>Class Constructures</summary>
 
 ```java
 
@@ -493,8 +510,10 @@ Peeled the  Apple
 Please peel the Apple first
 */
 ```
+</details>
 
-## 4.3 Scanner, Random and String Classes
+<details>
+<summary>Scanner, Random and String Classes</summary>
 
 ```java
 // To use classes from the Java API we must import them from their packages
@@ -558,6 +577,7 @@ public class Main {
 
 
 ```
+</details>
 
 <!-- 
 ## 5. Section
@@ -565,111 +585,6 @@ public class Main {
 ```java
 
 ``` -->
-
-
-## 5. Excercises
-
-Provided the following information
-about a number books (title,pages,subject,owner):
-
-Linear Algebra , 200 , Maths , none Thermodynamics , 700 , Physics , none
-Astrophysics , 500 , Physics , none
-
-Write a program that:
-
-- Prints information for all books
-- Find the physics book with most number of pages
-
-<details>
-<summary>Solution using parallel arrays</summary>
-
-```java
-public class Main{ 
-
-  public static void printInfo(String t,int p,String s,String o){
-    System.out.println("Book: " + t + " - " + p + " pages" 
-  + " ("+ s +") " + "Owner: " + o);}
-
-  public static void main(String[] args){
-
-    String[] titles = {"Linear Algebra","Thermodynamics","Astrophysics"};
-    int[] noPages = {200,700,500};
-    String[] subject = {"Maths","Physics","Physics"};
-    String[] owner = new String[3];
-    
-    // print info for all books
-    System.out.println("\nAll books info:");
-    for (int i = 0; i < titles.length; i++) {
-      printInfo(titles[i],noPages[i],subject[i],owner[i]);
-    }
-    
-    // find physics book with most number of pages
-    int maxPages = noPages[0], maxBookId=0;
-    for (int i = 0; i < titles.length; i++) {
-      if(subject[i].equals("Physics") &&  
-      maxPages<noPages[i])
-      {maxPages=noPages[i]; maxBookId=i;}
-    }
-    System.out.println("\nPhysics book with most number of pages:");
-    printInfo(titles[maxBookId],noPages[maxBookId],subject[maxBookId],owner[maxBookId]);
-
-  } 
-  
-}
-  
-```
-</details>
-
-<details>
-<summary>Solution using classes</summary>
-
-```java
-class Book{
-    public String title;
-    public int noPages;
-    public String subject;
-    public String owner;
-  
-    Book(String t,int p, String s){ title=t; noPages = p; subject = s; }
-    public void printInfo(){System.out.println("Book: " + title + " - " + noPages + " pages" 
-    + " ("+ subject +") " + "Owner: " + owner);}
-    public String getOwner(){return owner;}
-    public void setOwner(String s){owner=s;}
-  }
-  
-  public class Main{ 
-  
-    public static void main(String[] args){
-      
-      Book[] books = {
-        new Book("Linear Algebra", 200 , "Maths"),
-        new Book("Thermodynamics", 700 , "Physics"),
-        new Book("Astrophysics", 500 , "Physics"),
-      };
-      
-      // print info for all books
-      System.out.println("\nAll books info:");
-      for (int i = 0; i < books.length; i++) {
-        books[i].printInfo();
-      }
-  
-      // find physics book with most number of pages
-      int maxPages = books[0].noPages, maxBookId=0;
-      for (int i = 0; i < books.length; i++) {
-        if(books[i].subject.equals("Physics") &&  
-        maxPages<books[i].noPages)
-        {maxPages=books[i].noPages; maxBookId=i;}
-      }
-      System.out.println("\nPhysics book with most number of pages:");
-      books[maxBookId].printInfo();
-  
-    } 
-    
-  }
-    
-```
-</details>
-
 
 ## 5. Count, Min, Max, Sum, Average
 
