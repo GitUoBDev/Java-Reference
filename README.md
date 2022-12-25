@@ -69,7 +69,7 @@ public class Main{
 ```
 
 ## 2. Arrays
-<!-- 
+
 ```java
 
 public class Main {
@@ -110,7 +110,7 @@ public class Main {
   
 }
 
-``` -->
+```
 
 
 <details>
@@ -144,6 +144,7 @@ public class Main {
 10,11,12,
 
 */
+
 ```
 
 </details>
@@ -225,19 +226,8 @@ public class Main {
 ```
 </details>
 
-<details>
-<summary>3.3 Sample program using a function with input</summary>
 
-```java
-```
-</details>
 
-<details>
-<summary>3.3 Sample program using a function with input</summary>
-
-```java
-```
-</details>
 
 ## 3. Functions
 
@@ -284,7 +274,7 @@ public class Main {
 
 
 <details>
-<summary>3.1 Sample program without using functions</summary>
+<summary>Sample program without using functions</summary>
 
 ```java
 import java.util.Scanner;
@@ -310,7 +300,7 @@ public class Main {
 </details>
 
 <details>
-<summary>3.2 Sample program using a function with no input or return value</summary>
+<summary>Sample program using a function with no input or return value</summary>
 
 ```java
 import java.util.Scanner;
@@ -342,7 +332,7 @@ public class Main {
 </details>
 
 <details>
-<summary>3.3 Sample program using a function with input</summary>
+<summary>Sample program using a function with input</summary>
 
 ```java
 import java.util.Scanner;
@@ -374,7 +364,7 @@ public class Main {
 </details>
 
 <details>
-<summary>3.4 Sample program using a function with input and a return value</summary>
+<summary>Sample program using a function with input and a return value</summary>
 
 ```java
 import java.util.Scanner;
@@ -406,12 +396,6 @@ public class Main {
 ```
 </details>
 
-<details>
-<summary>3.3 Sample program using a function with input</summary>
-
-```java
-```
-</details>
 
 ## 4.1 Classes
 
@@ -581,3 +565,33 @@ public class Main {
 ```java
 
 ``` -->
+
+
+## 5. Excercises
+
+Provided the following information
+about a number books (title,pages,subject,owner):
+
+Linear Algebra , 200 , Maths , none Thermodynamics , 700 , Physics , none
+Astrophysics , 500 , Physics , none
+
+Write a program that:
+
+- Prints information for all books
+- Find the physics book with most number of pages
+
+<details>
+<summary>Solution using parallel arrays</summary>
+
+```java
+import java.util.Scanner;
+```
+</details>
+
+<details>
+<summary>Solution using classes</summary>
+
+```java
+import java.util.Scanner;
+```
+</details>
